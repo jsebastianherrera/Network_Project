@@ -1,9 +1,8 @@
-import argparse as arg
 import re
 import socket
-import signal
 from _thread import *
 import logging
+from requests import post
 
 
 class SocketServer:
@@ -43,11 +42,35 @@ class SocketServer:
             print(e)
             return {}
 
+    def get_type_and_url(self, request):
+        url = re.findall(b"\/\/(.*)\ ", request)
+        type = re.findall(b"[A-Z]*", request)[0]
+        if len(url) > 0 and type == b"GET" or type == b"POST":
+            return bytes.decode(url[0]), bytes.decode(type)
+        else:
+            return "", ""
+
+    def check_virtual_sites(self, webserver, recv):
+        t = 0
+        if webserver in self.__virtual_sites["Virtual host"]:
+            for i in self.__virtual_sites["Virtual host"]:
+                if i == webserver:
+                    tmp = self.__virtual_sites["Real host"][t]
+                    root = self.__virtual_sites["Root directory"][t]
+                    break
+                t += 1
+            aux = bytes.decode(recv)
+            aux = aux.replace(webserver, tmp)
+            aux = aux.replace("http://" + tmp + "/",
+                              "http://" + tmp + "/" + root)
+            return True, tmp, aux.encode()
+        else:
+            return False, "", recv
+
     def handle_request(self, client: socket, addr):
         request = client.recv(self.__buffer_size)
-        results = re.findall(b"\/\/(.*)\ ", request)
-        if len(results) > 0:
-            url = bytes.decode(results[0])
+        url, type = self.get_type_and_url(request)
+        if url != "" and type != "":
             if len(re.findall(":[0-9]*", url)) > 0:
                 port = int(re.search(":[0-9]*", url)[0][1:])
                 webserver = re.search("([A-Z\.a-z0-9]*)", url)[0]
@@ -55,47 +78,70 @@ class SocketServer:
                 # default port 80
                 port = 80
                 webserver = re.search("([A-Z\.a-z0-9]*)", url)[0]
-                self.proxy_server(webserver, port, client, request, addr)
+            self.proxy_server(webserver, port, client, request, type)
 
-    def proxy_server(self, webserver, port, client, recv, addr):
+    def get_request(self, socket: socket, client, webserver):
         try:
-            t = 0
-            resend = ""
-            flag = True
-            logging.info(str(addr) + " requests ->" + webserver)
-            print("Port:", port, "\t", "Web:", webserver, end="\n\n")
-            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            if webserver in self.__virtual_sites["Virtual host"]:
-                for i in self.__virtual_sites["Virtual host"]:
-                    if i == webserver:
-                        tmp = self.__virtual_sites["Real host"][t]
-                        root = self.__virtual_sites["Root directory"][t]
-                        flag = False
-                        break
-                    t += 1
-                aux = bytes.decode(recv)
-                aux = aux.replace(webserver, tmp)
-                aux = aux.replace("http://" + tmp + "/", "http://" + tmp + "/" + root)
-                recv = aux.encode(aux)
-                resend = "http://" + tmp + "/" + root
+            while True:
+                reply = socket.recv(self.__buffer_size)
+                if len(reply) > 0:
+                    logging.info("Replied GET->" + webserver)
+                    print('______REPLIED GET______')
+                    print(reply.decode(encoding="utf8", errors='ignore'))
+                    client.send(reply)
+                else:
+                    break
+        except Exception as e:
+            print(str(e))
 
-            print("*************Requested**************")
-            print(recv)
+    def get_data_post(self, reply):
+        try:
+            index = reply.rindex("\"form\":")
+            x = reply[index:].split("}")[0].split("{")[1]
+            return x
+        except Exception as e:
+            return None
+
+    def post_request(self, socket: socket, client, webserver):
+        try:
+            while True:
+                reply = socket.recv(self.__buffer_size)
+                if len(reply) > 0:
+                    data = self.get_data_post(reply.decode(
+                        encoding="utf8", errors='ignore'))
+                else:
+                    break
+                if data is not None:
+                    if len(data) > 0:
+                        logging.info("Replied POST->" + webserver + data)
+                        print('______REPLIED POST______')
+                        print(reply.decode(encoding="utf8", errors='ignore'))
+                        client.send(reply)
+
+        except Exception as e:
+            print(str(e))
+
+    def proxy_server(self, webserver, port, client, recv, type):
+        try:
+            print("Port:", port, "\t", "Web:", webserver)
+            print("_________REQUEST_________")
+            logging.info("REQUESTED->" + webserver)
+            print(recv.decode(encoding="utf8", errors='ignore'))
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            flag, web, tmp = self.check_virtual_sites(webserver, recv)
+            if flag:
+                recv = tmp
+                webserver = web
+                print("_________REDIRECTED_________")
+                logging.info("REDIRECTED->" + webserver)
+                print(recv.decode(encoding="utf8", errors='ignore'))
+
             s.connect((webserver, port))
             s.send(recv)
-            while True:
-                reply = s.recv(self.__buffer_size)
-                if len(reply) > 0:
-                    client.send(reply)
-                    print("************Replied***********")
-                    print(reply)
-                    if not flag:
-                        logging.info("Replied ->" + resend)
-                    else:
-                        logging.info("Replied ->" + webserver)
-                else:
-                    logging.info("Replied -> none")
-                    break
+            if type == "GET":
+                self.get_request(s, client, webserver)
+            elif type == "POST":
+                self.post_request(s, client, webserver)
             s.close()
 
         except Exception as e:
@@ -107,18 +153,4 @@ if __name__ == "__main__":
     port = 5555
     address = "127.0.0.1"
     file = "virtual_sites.txt"
-    parser = arg.ArgumentParser(description="Basic python proxy")
-    parser.add_argument("-p", "--port", type=int, help="[0-9]*")
-    parser.add_argument("-a", "--address", help="Ipv4 address")
-    parser.add_argument("-n", "--connections", type=int, help="Max connections")
-    parser.add_argument("-f", "--file", help="File name")
-    args = parser.parse_args()
-    if args.port != None:
-        port = args.port
-    if args.connections != None:
-        n = args.connections
-    if args.address != None:
-        address = args.address
-    if args.file != None:
-        file = args.file
     sock = SocketServer(port, address, n, file)

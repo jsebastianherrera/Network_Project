@@ -1,0 +1,15 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "Network_Project": true,
+        "socketServer.py": true,
+        "*.py": true,
+        ".vscode": true
+    },
+    "explorerExclude.backup": null
+}

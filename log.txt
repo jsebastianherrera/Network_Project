@@ -1,112 +1,48 @@
-2021-09-20 12:14:48,125 INFO     ('127.0.0.1', 56697) requests ->detectportal.firefox.com
-2021-09-20 12:14:48,156 INFO     Replied ->detectportal.firefox.com
-2021-09-20 12:14:48,190 INFO     ('127.0.0.1', 56700) requests ->detectportal.firefox.com
-2021-09-20 12:14:48,191 INFO     ('127.0.0.1', 56701) requests ->detectportal.firefox.com
-2021-09-20 12:14:48,212 INFO     Replied ->detectportal.firefox.com
-2021-09-20 12:14:48,212 INFO     Replied ->detectportal.firefox.com
-2021-09-20 12:14:48,269 INFO     ('127.0.0.1', 56705) requests ->r3.o.lencr.org
-2021-09-20 12:14:48,292 INFO     Replied ->r3.o.lencr.org
-2021-09-20 12:14:48,998 INFO     ('127.0.0.1', 56717) requests ->ocsp.digicert.com
-2021-09-20 12:14:49,131 INFO     Replied ->ocsp.digicert.com
-2021-09-20 12:15:13,347 INFO     ('127.0.0.1', 52942) requests ->www.mariapages.com
-2021-09-20 12:15:26,521 INFO     ('127.0.0.1', 52953) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,185 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,190 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,194 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,265 INFO     ('127.0.0.1', 52956) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,266 INFO     ('127.0.0.1', 52957) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,270 INFO     ('127.0.0.1', 52958) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,272 INFO     ('127.0.0.1', 52959) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,275 INFO     ('127.0.0.1', 52960) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,276 INFO     ('127.0.0.1', 52961) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,278 INFO     ('127.0.0.1', 52962) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,279 INFO     ('127.0.0.1', 52964) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,281 INFO     ('127.0.0.1', 52965) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,287 INFO     ('127.0.0.1', 52963) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,291 INFO     ('127.0.0.1', 52967) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,291 INFO     ('127.0.0.1', 52966) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,343 INFO     ('127.0.0.1', 52981) requests ->ocsp.pki.goog
-2021-09-20 12:15:29,345 INFO     ('127.0.0.1', 52982) requests ->ocsp.pki.goog
-2021-09-20 12:15:29,354 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,355 INFO     ('127.0.0.1', 52976) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,358 INFO     ('127.0.0.1', 52985) requests ->fonts.gstatic.com
-2021-09-20 12:15:29,367 INFO     ('127.0.0.1', 52987) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,391 INFO     Replied ->fonts.gstatic.com
-2021-09-20 12:15:29,409 INFO     ('127.0.0.1', 52990) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,410 INFO     ('127.0.0.1', 52991) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,411 INFO     ('127.0.0.1', 52993) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,420 INFO     Replied ->ocsp.pki.goog
-2021-09-20 12:15:29,425 INFO     Replied ->ocsp.pki.goog
-2021-09-20 12:15:29,438 INFO     ('127.0.0.1', 52994) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,442 INFO     ('127.0.0.1', 52996) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,445 INFO     ('127.0.0.1', 52999) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:29,637 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,638 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,645 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,649 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,662 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,670 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,673 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,677 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,680 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,681 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,683 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,694 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,720 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,726 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,785 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,787 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,817 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,822 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,825 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,933 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,936 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:29,940 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:30,114 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:30,122 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:30,127 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:30,132 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:30,282 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:30,286 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:30,289 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:30,291 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:30,295 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:30,456 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:30,460 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:30,463 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:30,466 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:30,469 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:30,473 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:30,474 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:30,633 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:37,866 INFO     ('127.0.0.1', 53014) requests ->ocsp.pki.goog
-2021-09-20 12:15:37,942 INFO     Replied ->ocsp.pki.goog
-2021-09-20 12:15:39,190 INFO     Replied -> none
-2021-09-20 12:15:39,636 INFO     Replied -> none
-2021-09-20 12:15:39,639 INFO     Replied -> none
-2021-09-20 12:15:39,641 INFO     Replied -> none
-2021-09-20 12:15:39,668 INFO     Replied -> none
-2021-09-20 12:15:39,680 INFO     Replied -> none
-2021-09-20 12:15:39,680 INFO     Replied -> none
-2021-09-20 12:15:39,680 INFO     Replied -> none
-2021-09-20 12:15:39,719 INFO     Replied -> none
-2021-09-20 12:15:39,727 INFO     Replied -> none
-2021-09-20 12:15:39,784 INFO     Replied -> none
-2021-09-20 12:15:39,786 INFO     ('127.0.0.1', 53017) requests ->tamilhackers.unaux.com
-2021-09-20 12:15:39,786 INFO     Replied -> none
-2021-09-20 12:15:39,823 INFO     Replied -> none
-2021-09-20 12:15:39,929 INFO     Replied -> none
-2021-09-20 12:15:40,146 INFO     Replied ->tamilhackers.unaux.com
-2021-09-20 12:15:50,147 INFO     Replied -> none
-2021-09-20 12:15:53,101 INFO     ('127.0.0.1', 53026) requests ->detectportal.firefox.com
-2021-09-20 12:15:53,116 INFO     Replied ->detectportal.firefox.com
-2021-09-20 12:16:00,947 INFO     ('127.0.0.1', 53033) requests ->www.mariapages.com
-2021-09-20 12:16:28,369 INFO     ('127.0.0.1', 53050) requests ->eruiz.javeriana.co
-2021-09-20 12:16:30,733 INFO     Replied ->eruiz.javeriana.co
-2021-09-20 12:16:30,734 INFO     Replied -> none
-2021-09-20 12:16:30,737 INFO     ('127.0.0.1', 53054) requests ->ww1.javeriana.co
-2021-09-20 12:16:31,039 INFO     Replied ->ww1.javeriana.co
-2021-09-20 12:16:32,275 INFO     ('127.0.0.1', 53057) requests ->ww1.javeriana.co
-2021-09-20 12:16:32,469 INFO     Replied ->ww1.javeriana.co
-2021-09-20 12:16:51,037 INFO     Replied -> none
-2021-09-20 12:16:52,470 INFO     Replied -> none
+2021-10-25 16:18:59,150 INFO     REQUESTED->detectportal.firefox.com
+2021-10-25 16:18:59,188 INFO     Replied GET->detectportal.firefox.com
+2021-10-25 16:18:59,228 INFO     REQUESTED->detectportal.firefox.com
+2021-10-25 16:18:59,229 INFO     REQUESTED->detectportal.firefox.com
+2021-10-25 16:18:59,243 INFO     Replied GET->detectportal.firefox.com
+2021-10-25 16:18:59,243 INFO     Replied GET->detectportal.firefox.com
+2021-10-25 16:18:59,400 INFO     REQUESTED->r3.o.lencr.org
+2021-10-25 16:18:59,849 INFO     REQUESTED->ocsp.digicert.com
+2021-10-25 16:19:00,241 INFO     REQUESTED->ocsp.pki.goog
+2021-10-25 16:19:00,692 INFO     REQUESTED->ocsp.digicert.com
+2021-10-25 16:19:04,003 INFO     REQUESTED->ocsp.digicert.com
+2021-10-25 16:19:13,719 INFO     REQUESTED->info.cern.ch
+2021-10-25 16:19:14,101 INFO     Replied GET->info.cern.ch
+2021-10-25 16:22:15,352 INFO     REQUESTED->detectportal.firefox.com
+2021-10-25 16:22:15,386 INFO     Replied GET->detectportal.firefox.com
+2021-10-25 16:22:15,417 INFO     REQUESTED->detectportal.firefox.com
+2021-10-25 16:22:15,419 INFO     REQUESTED->detectportal.firefox.com
+2021-10-25 16:22:15,430 INFO     Replied GET->detectportal.firefox.com
+2021-10-25 16:22:15,431 INFO     Replied GET->detectportal.firefox.com
+2021-10-25 16:22:15,595 INFO     REQUESTED->r3.o.lencr.org
+2021-10-25 16:22:15,788 INFO     REQUESTED->ocsp.digicert.com
+2021-10-25 16:22:16,402 INFO     REQUESTED->ocsp.digicert.com
+2021-10-25 16:22:21,990 INFO     REQUESTED->ocsp.digicert.com
+2021-10-25 16:22:45,280 INFO     REQUESTED->info.cern.ch
+2021-10-25 16:22:45,663 INFO     Replied GET->info.cern.ch
+2021-10-25 16:23:08,677 INFO     REQUESTED->ocsp.digicert.com
+2021-10-25 16:23:20,342 INFO     REQUESTED->detectportal.firefox.com
+2021-10-25 16:23:20,356 INFO     Replied GET->detectportal.firefox.com
+2021-10-25 16:24:05,176 INFO     REQUESTED->ocsp.pki.goog
+2021-10-25 16:24:05,429 INFO     REQUESTED->ocsp.pki.goog
+2021-10-25 16:24:15,476 INFO     REQUESTED->translate.google.com
+2021-10-25 16:24:15,480 INFO     REQUESTED->www.col
+2021-10-25 16:24:15,481 INFO     REDIRECTED->www.columbia.edu
+2021-10-25 16:24:15,595 INFO     Replied GET->translate.google.com
+2021-10-25 16:24:15,690 INFO     Replied GET->www.columbia.edu
+2021-10-25 16:24:15,837 INFO     REQUESTED->ocsp.pki.goog
+2021-10-25 16:24:15,942 INFO     REQUESTED->ocsp.pki.goog
+2021-10-25 16:24:15,945 INFO     REQUESTED->ocsp.pki.goog
+2021-10-25 16:24:17,968 INFO     REQUESTED->ocsp.pki.goog
+2021-10-25 16:24:17,983 INFO     REQUESTED->translate.google.com
+2021-10-25 16:24:18,045 INFO     Replied GET->translate.google.com
+2021-10-25 16:24:30,502 INFO     REQUESTED->ocsp.digicert.com
+2021-10-25 16:24:31,497 INFO     REQUESTED->ocsp.digicert.com
+2021-10-25 16:25:56,187 INFO     REQUESTED->httpbin.org
+2021-10-25 16:25:56,399 INFO     Replied POST->httpbin.org
+    "age": "15", 
+    "name": "sebas"
+  

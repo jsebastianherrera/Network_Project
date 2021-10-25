@@ -1,3 +1,4 @@
 r.paez,sophia.javeriana.edu.co,~rpaez/
-e.ruiz,sophia.javeriana.edu.coE,~eruiz/
+e.ruiz,sophia.javeriana.edu.co,~eruiz/
 www.mariapages.com,sophia.javeriana.edu.co,~mariap/
+www.col,www.columbia.edu,~fdc/
